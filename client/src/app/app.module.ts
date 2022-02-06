@@ -36,6 +36,8 @@ import {RefreshService} from "./services/refresh.service";
 import { DialogComponent } from './misc/dialog/dialog.component';
 import { HeadnavComponent } from './components/main/headnav/headnav.component';
 import {MatMenuModule} from "@angular/material/menu";
+import { SidenavComponent } from './components/main/sidenav/sidenav.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 @NgModule({
   declarations: [
@@ -60,6 +62,7 @@ import {MatMenuModule} from "@angular/material/menu";
     FormCustomerComponent,
     DialogComponent,
     HeadnavComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import {MatMenuModule} from "@angular/material/menu";
     MatSelectModule,
     MatIconModule,
     MatSnackBarModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [RefreshService],
   bootstrap: [AppComponent]
