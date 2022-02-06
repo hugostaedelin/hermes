@@ -1,0 +1,26 @@
+.head-flex {
+  background-color: #5E73DD;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.img-brand {
+  margin: 10px;
+  width: 60px;
+  padding-left: 5em;
+}
+
+.head-menu-navigation {
+  display: flex;
+  list-style: none;
+}
+
+.head-menu-navigation > li > a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.active-link {
+  background: rgba(0,0,0,.2);
+}

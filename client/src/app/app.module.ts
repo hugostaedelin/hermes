@@ -34,6 +34,8 @@ import { FormStockComponent } from './modals/form-stock/form-stock.component';
 import { FormCustomerComponent } from './modals/form-customer/form-customer.component';
 import {RefreshService} from "./services/refresh.service";
 import { DialogComponent } from './misc/dialog/dialog.component';
+import { HeadnavComponent } from './components/main/headnav/headnav.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { DialogComponent } from './misc/dialog/dialog.component';
     FormStockComponent,
     FormCustomerComponent,
     DialogComponent,
+    HeadnavComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,8 @@ import { DialogComponent } from './misc/dialog/dialog.component';
     MatButtonModule,
     MatSelectModule,
     MatIconModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule
   ],
   providers: [RefreshService],
   bootstrap: [AppComponent]
