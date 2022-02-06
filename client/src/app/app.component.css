@@ -38,3 +38,11 @@ li > a:active {
 .list-product {
   display: contents;
 }
+
+.outlet-fixed {
+  position: fixed;
+  left: 215px;
+  top: 100px;
+  height: 100%;
+  width: 100%;
+}

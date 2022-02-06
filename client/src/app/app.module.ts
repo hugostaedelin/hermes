@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainViewComponent } from './components/main-view/main-view.component';
 import { StockViewComponent } from './components/stock/stock-view/stock-view.component';
 import { ProductViewComponent } from './components/product/product-view/product-view.component';
 import { OrderViewComponent } from './components/order/order-view/order-view.component';
@@ -38,11 +37,11 @@ import { HeadnavComponent } from './components/main/headnav/headnav.component';
 import {MatMenuModule} from "@angular/material/menu";
 import { SidenavComponent } from './components/main/sidenav/sidenav.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { DashboardComponent } from './components/main/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainViewComponent,
     StockViewComponent,
     ProductViewComponent,
     OrderViewComponent,
@@ -63,6 +62,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     DialogComponent,
     HeadnavComponent,
     SidenavComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
