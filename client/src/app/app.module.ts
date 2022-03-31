@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainViewComponent } from './components/main-view/main-view.component';
 import { StockViewComponent } from './components/stock/stock-view/stock-view.component';
 import { ProductViewComponent } from './components/product/product-view/product-view.component';
@@ -61,7 +60,6 @@ import { DialogComponent } from './misc/dialog/dialog.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     NoopAnimationsModule,
     HttpClientModule,
     MatTableModule,
