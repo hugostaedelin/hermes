@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {StockService} from "../../../services/stock.service";
 import {Stock} from "../../../models/stock";
-import {FormStockComponent} from "../../../modals/form-stock/form-stock.component";
 import {MatDialog} from "@angular/material/dialog";
 
 @Component({
@@ -27,10 +26,4 @@ export class StockListComponent implements OnInit {
         console.error("STOCK-LIST-ERROR: " + error);
       });
     }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(FormStockComponent, {
-      width: '500px',
-    });
-  }
 }
