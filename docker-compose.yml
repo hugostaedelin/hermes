@@ -9,7 +9,7 @@ services:
       - hdb:/var/lib/postgresql/data
     env_file:
       - ./.env
-  hermes-api:
+  api:
     container_name: hermes-api
     build:
       context: api
