@@ -10,7 +10,7 @@ RUN yarn install
 
 EXPOSE 3000
 
-RUN yarn start:dev
+CMD yarn start:dev
 
 FROM node:17.9.1-alpine as prod
 
