@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from "../../../models/customer";
-import {CustomerService} from "../../../services/customer.service";
-import { FormOrderComponent } from '../../../modals/form-order/form-order.component';
+import { Customer } from "../../../models/customer";
+import { CustomerService } from "../../../services/customer.service";
 import { MatDialog } from '@angular/material/dialog';
-import { FormCustomerComponent } from '../../../modals/form-customer/form-customer.component';
 
 @Component({
   selector: 'app-customer-list',
@@ -28,12 +26,5 @@ export class CustomerListComponent implements OnInit {
     }, error => {
       console.error(error);
     })
-  }
-
-
-  openDialog() {
-    const dialogRef = this.dialog.open(FormCustomerComponent, {
-      width: '500px',
-    });
   }
 }

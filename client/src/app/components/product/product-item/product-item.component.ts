@@ -1,10 +1,8 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import {Product} from "../../../models/product";
-import {ProductService} from "../../../services/product.service";
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {MatDialog} from "@angular/material/dialog";
-import {FormProductComponent} from "../../../modals/form-product/form-product.component";
-import {EditFormProductComponent} from "../../../modals/edit-form-product/edit-form-product.component";
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from "../../../models/product";
+import { ProductService } from "../../../services/product.service";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-product-item',
@@ -34,12 +32,5 @@ export class ProductItemComponent implements OnInit {
   deleteProduct() {
     this.productService.delete(this.product.reference);
     this.openSnackBar('Le produit a été supprimé !');
-  }
-
-  openEditDialog() {
-    const dialogRef = this.dialog.open(EditFormProductComponent, {
-      width: '500px',
-      data: this.product
-    });
   }
 }

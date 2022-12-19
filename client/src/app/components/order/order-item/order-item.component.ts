@@ -1,8 +1,7 @@
 import { Component, Input } from '@angular/core';
-import {ProductsFromOrdersService} from "../../../services/products-from-orders.service";
-import {EditFormProductComponent} from "../../../modals/edit-form-product/edit-form-product.component";
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {MatDialog} from "@angular/material/dialog";
+import { ProductsFromOrdersService } from "../../../services/products-from-orders.service";
+import { MatSnackBar } from "@angular/material/snack-bar";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: 'app-order-item',
@@ -23,13 +22,6 @@ export class OrderItemComponent {
       duration: 2000,
       horizontalPosition: 'left',
       verticalPosition: 'bottom',
-    });
-  }
-
-  openEditDialog() {
-    const dialogRef = this.dialog.open(EditFormProductComponent, {
-      width: '500px',
-      // data: this.product
     });
   }
 

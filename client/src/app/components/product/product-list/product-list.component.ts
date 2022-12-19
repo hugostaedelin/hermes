@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Product} from "../../../models/product";
 import {ProductService} from "../../../services/product.service";
 import {MatDialog} from "@angular/material/dialog";
-import {FormProductComponent} from "../../../modals/form-product/form-product.component";
 
 @Component({
   selector: 'app-product-list',
@@ -27,12 +26,5 @@ export class ProductListComponent implements OnInit {
     }, error => {
       console.error("PRODUCT-VIEW-ERROR: " + error);
     })
-  }
-
-  openDialog() {
-    this.getProducts();
-    const dialogRef = this.dialog.open(FormProductComponent, {
-      width: '500px',
-    });
   }
 }

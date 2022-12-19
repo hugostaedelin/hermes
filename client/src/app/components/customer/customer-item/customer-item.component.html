@@ -1,24 +1,9 @@
-<div>
-  <div class="container-fluid d-flex">
-    <div class="col-3">
-      <span class="card-text">{{ customer.id }}</span>
-    </div>
-    <div class="col-3">
-      <p class="card-text">{{ customer.firstname }}</p>
-    </div>
-    <div class="col-3">
-      <p class="card-text">{{ customer.lastname }}</p>
-    </div>
-    <div class="col-3">
-      <a>
-        <button mat-icon-button (click)="openEditDialog()">
-          <mat-icon color="primary">edit</mat-icon>
-        </button>
-      </a>
-      <button mat-icon-button (click)="deleteProduct()">
-        <mat-icon color="warn">delete</mat-icon>
-      </button>
+<div class="rounded-lg shadow-lg">
+  <div class="w-40 p-4 md:p-4">
+    <h1 class="text-2xl font-bold">{{ customer.id }}</h1>
+    <div>
+      <p class="mt-2 text-sm">Prénom: <span>{{ customer.firstname }}</span></p>
+      <p class="mt-2 text-sm">Nom:  <span>{{ customer.lastname }} </span></p>
     </div>
   </div>
 </div>
-

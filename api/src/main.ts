@@ -1,23 +1,19 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import * as fs from 'fs';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const APP_NAME = process.env.npm_package_name;
-
-  const options = new DocumentBuilder()
-    .setTitle(APP_NAME)
-    .setDescription(`The ${APP_NAME} description`)
-    .setVersion('1.3.5')
+  const config = new DocumentBuilder()
+    .setTitle(process.env.SWAGGER_TITLE)
+    .setDescription(process.env.SWAGGER_DESC)
+    .setVersion(process.env.SWAGGER_VERSION)
     .build();
-  const document = SwaggerModule.createDocument(app, options);
 
-  fs.writeFileSync('./swagger-spec.json', JSON.stringify(document));
-  SwaggerModule.setup('docs/api/v1/', app, document);
-  app.enableCors();
+  const doc = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs/api/v2/', app, doc);
+
   await app.listen(3000);
 }
 bootstrap();
